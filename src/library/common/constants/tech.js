@@ -61,12 +61,12 @@ export const techStackImageData = [
 		name  : 'Redux',
 		link  : 'https://redux.js.org/',
 	},
-	{
-		id    : '11',
-		image : IMAGES['SERVICE'],
-		name  : 'ServiceNow',
-		link  : 'https://www.servicenow.com/',
-	},
+	// {
+	// 	id    : '11',
+	// 	image : IMAGES['SERVICE'],
+	// 	name  : 'ServiceNow',
+	// 	link  : 'https://www.servicenow.com/',
+	// },
 	{
 		id    : '12',
 		image : IMAGES['NODE'],
