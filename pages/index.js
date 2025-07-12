@@ -3,6 +3,7 @@ import Helmet from 'src/library/common/components/Helmet';
 import Home from 'src/library/common/components/Home';
 import AboutMe from 'src/library/common/components/AboutMe';
 import TechStack from 'src/library/common/components/TechStack';
+import Projects from 'src/library/common/components/Projects';
 import { STRINGS } from 'src/library/common/constants/strings';
 import { IMAGES } from 'src/library/common/constants/images';
 
@@ -17,6 +18,7 @@ function IndexPage(){
 			/>
 			<Home />
 			<TechStack />
+			{/* <Projects /> */}
 			<AboutMe />
 		</div>
 	);
