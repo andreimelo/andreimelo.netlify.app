@@ -27,7 +27,7 @@ function AboutMe(){
 			>
 				<div className={avatar}>
 					<img
-						src={IMAGES.IOS_EMOTICON}
+						src={IMAGES['MY_PROFILE_MED']}
 						className={my_emoticon}
 						alt='myEmoticon'
 					/>

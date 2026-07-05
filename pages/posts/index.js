@@ -46,7 +46,6 @@ const Post = ({ posts }) => {
 export const getStaticProps = async () => {
 	const response = await getEntries({ content_type: 'blog' });
 	const items = response?.items || [];
-	console.log('items', items);
 	
 	return {
 		props : {
