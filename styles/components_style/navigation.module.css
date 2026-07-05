@@ -11,6 +11,14 @@
   z-index: 1000;
 }
 
+.theme_toggle {
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-px-medium)
+}
+
 .nav_container {
   /* margin: auto; */
   width: 80%;

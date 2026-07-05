@@ -18,7 +18,10 @@ import {
 	nav_opt_out,
 	nav_menu_mobile,
 	nav_item_mobile,
+	theme_toggle,
 } from 'styles/components_style/navigation.module.css';
+import { useContext } from 'react';
+import ThemeContext from 'src/library/common/context/ThemeContext';
 import { Link } from 'react-scroll';
 import { useRouter } from 'next/router';
 
@@ -28,6 +31,7 @@ function Navigation({ logo, data }){
 		setOpenNav,
 	] = useState(false);
 	const router = useRouter();
+	const { isDark, toggleTheme } = useContext(ThemeContext);
 	const isBlogPostsPath =
 		router.pathname === '/posts' || router.pathname.includes('/posts');
 	const bgLineMenu =
@@ -78,6 +82,14 @@ function Navigation({ logo, data }){
 					</div>
 				</div>
 				{/* Mobile Nav */}
+				{/* Theme toggle */}
+				<button
+					className={theme_toggle}
+					aria-label='Toggle theme'
+					onClick={() => toggleTheme()}
+				>
+					{isDark ? '🌙' : '☀️'}
+				</button>
 				<div
 					className={`${nav_item_container_mobile} ${
 						openNav ? open :

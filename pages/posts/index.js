@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { client } from 'src/library/contentful/client';
+import { getEntries } from 'src/library/contentful/client';
 import PostCard from 'pages/posts/components/PostCard';
 import {
 	load_more_container,
@@ -44,10 +44,13 @@ const Post = ({ posts }) => {
 };
 
 export const getStaticProps = async () => {
-	const response = await client.getEntries({ content_type: 'blog' });
+	const response = await getEntries({ content_type: 'blog' });
+	const items = response?.items || [];
+	console.log('items', items);
+	
 	return {
 		props : {
-			posts      : response.items,
+			posts      : items,
 			revalidate : 60,
 		},
 	};

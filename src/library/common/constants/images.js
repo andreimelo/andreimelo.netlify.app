@@ -31,6 +31,7 @@ export const IMAGES = {
 	LINKED_IN    : linkedIn,
 	TWITTER      : twitter,
 	IOS_EMOTICON : myEmoticon,
+	ABOUT_FACE   : '/images/about_face.png',
 	CODING_ISO   : codingIso,
 	UNSPLASH_BAG : '/images/unsplash_bag.png',
 	DEV          : dev,
