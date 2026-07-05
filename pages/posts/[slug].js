@@ -1,5 +1,5 @@
 import React from 'react';
-import { client } from 'src/library/contentful/client';
+import { getEntries } from 'src/library/contentful/client';
 import { useRouter } from 'next/router';
 import PostHeader from './components/PostHeader';
 import PostBody from './components/PostBody';
@@ -32,13 +32,15 @@ const Post = ({ post, preview }) => {
 };
 
 export const getStaticProps = async ({ params, preview = false }) => {
-	// const cfClient = preview ? previewClient : client;
 	const { slug } = params;
-	const response = await client.getEntries({
+	const response = await getEntries({
 		content_type  : 'blog',
 		'fields.slug' : slug,
 	});
-	if (!response.items.length) {
+	console.log(response, 'response');
+	const items = response?.items || [];
+
+	if (!items.length) {
 		return {
 			redirect : {
 				destination : '/posts',
@@ -49,7 +51,7 @@ export const getStaticProps = async ({ params, preview = false }) => {
 
 	return {
 		props : {
-			post       : response.items[0],
+			post       : items[0],
 			preview,
 			revalidate : 60,
 		},
@@ -57,8 +59,9 @@ export const getStaticProps = async ({ params, preview = false }) => {
 };
 
 export const getStaticPaths = async () => {
-	const response = await client.getEntries({ content_type: 'blog' });
-	const paths = response.items.map((item) => ({
+	const response = await getEntries({ content_type: 'blog' });
+	const items = response?.items || [];
+	const paths = items.map((item) => ({
 		params : { slug: item.fields.slug },
 	}));
 
