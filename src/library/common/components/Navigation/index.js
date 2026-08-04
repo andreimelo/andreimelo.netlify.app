@@ -37,6 +37,10 @@ function Navigation({ logo, data }){
 	const bgLineMenu =
 		!openNav ? nav_line_menu :
 		`${nav_line_menu} ${white}`;
+	const scrollLinkProps = {
+		offset   : -70,
+		spy      : true,
+	};
 
 	function handleNavState(){
 		setOpenNav(!openNav);
@@ -55,11 +59,8 @@ function Navigation({ logo, data }){
 								item && (
 									<div key={i} className={nav_item}>
 										<Link
-											href={`#${item}`}
-											smooth
-											offset={-70}
-											hashSpy
 											to={item}
+											{...scrollLinkProps}
 										>
 											{item}
 										</Link>
@@ -116,11 +117,8 @@ function Navigation({ logo, data }){
 										//class
 										<div key={i} className={nav_item_mobile}>
 											<Link
-												href={`#${item}`}
-												smooth
-												offset={-70}
-												hashSpy
 												to={item}
+												{...scrollLinkProps}
 												onClick={handleNavState}
 											>
 												{item}

@@ -18,7 +18,7 @@ function IndexPage(){
 			/>
 			<Home />
 			<TechStack />
-			{/* <Projects /> */}
+			<Projects />
 			<AboutMe />
 		</div>
 	);
