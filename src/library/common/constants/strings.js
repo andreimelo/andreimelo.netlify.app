@@ -8,9 +8,43 @@ export const STRINGS = {
 	NAVIGATION_DATA   : [
 		'Home',
 		'Tech Stack',
-		// 'Projects',
+		'Project',
 		'About me',
 	],
+	PROJECTS_SECTION  : {
+		TITLE   : 'Featured Projects',
+		BUTTONS : {
+			LIVE_DEMO   : 'Live Demo',
+			VIEW_SOURCE : 'View Source',
+		},
+		ITEMS   : [
+			{
+				title       : 'E-Commerce',
+				description :
+					'Full-stack MERN eCommerce platform with authentication, product management, cart, checkout and admin dashboard.',
+				image       : '/images/ps_ecom.png',
+				urlLabel    : 'dev-env-ecommerce.netlify.app',
+				tags        : [
+					'React',
+					'Node.js',
+					'Express',
+					'MongoDB',
+					'Redux',
+					'JWT',
+				],
+				liveDemo    : 'https://dev-env-ecommerce.netlify.app',
+				source      : 'https://github.com/andreimelo/ecommerce',
+				features    : [
+					{ icon: '◆', title: 'Full Stack', text: 'Development' },
+					{ icon: '▣', title: 'Responsive', text: 'Design' },
+					{ icon: '✶', title: 'JWT', text: 'Authentication' },
+					{ icon: '◍', title: 'Admin', text: 'Dashboard' },
+					{ icon: '⬡', title: 'RESTful', text: 'API' },
+					{ icon: '⬢', title: 'MongoDB', text: 'Database' },
+				],
+			},
+		],
+	},
 	INTRO1            :
 		"Hi, I'm Andrei Melo, a dedicated Front-end/React Developer and I graduated at De La Salle University – Dasmariñas with the degree of Bachelor of Science in Information Technology, I love to build website from modern web technologies. Specifically focusing on ReactJS for the time being and with minimal skills in designing.",
 	INTRO2            :

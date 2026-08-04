@@ -13,8 +13,8 @@ import { STRINGS } from 'src/library/common/constants/strings';
 function AboutMe(){
 	const { isVisible, ref } = useScrollReveal();
 	return (
-		<section id={STRINGS.NAVIGATION_DATA[2]} className={about_wrapper}>
-			<h2>{STRINGS.NAVIGATION_DATA[2]}</h2>
+		<section id={STRINGS.NAVIGATION_DATA[3]} className={about_wrapper}>
+			<h2>{STRINGS.NAVIGATION_DATA[3]}</h2>
 			<motion.div
 				ref={ref}
 				initial={{ opacity: 0, y: 50 }}
